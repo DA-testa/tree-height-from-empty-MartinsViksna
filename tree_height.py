@@ -9,17 +9,19 @@ def compute_height(n, parents):
     heights = np.zeros(n)
     # Write this function
     max_height = 0
+    y = 0
     for i in range(n):
         if heights[i] == 0:
-            height =1
-            p = parents[i]
-            while p!= -1:
-                if heights[p] !=0:
-                    height += heights[p]
-                    break
-                height +=1
-                p = parents[p]
-        max_height = max(max_height, height)
+            y = i
+            height =np.zeros(n)
+            number = 0
+            
+            while y >=0 and height[y]==0:
+                heights[y] = 1
+                height[y] = 1
+                number +=1
+                y = parents[y]
+        max_height = max(max_height, number)
 
     # Your code here
     return max_height
