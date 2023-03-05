@@ -27,7 +27,7 @@ def compute_height(n, parents):
 
 def main():
     x = input("input from where will you input information?")
-    if x == "F":
+    if 'F' in x:
         file_name = input("input the name of the file(make sure it has no a's)")
         if 'a' in file_name:
             print("a in file name")
@@ -40,7 +40,7 @@ def main():
             print("no such file")
             return
 
-    elif x=="I":
+    elif 'I' in x:
         n = int(input("how long will be the tree"))
         parents = np.array(list(map(int, input("input the numbers").strip().split())))
     else:
