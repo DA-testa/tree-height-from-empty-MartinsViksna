@@ -28,7 +28,8 @@ def compute_height(n, parents):
 def main():
     x = input("input from where will you input information?")
     if 'F' in x:
-        file_name = ("\test"+input("input the name of the file(make sure it has no a's)"))
+        file_name = input("input the name of the file(make sure it has no a's)")
+        file_name = "test/" + file_name
         if 'a' in file_name:
             print("a in file name")
         try:
