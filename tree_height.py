@@ -36,7 +36,7 @@ def main():
 
             with open(file_name)as file:
                 n = int(file.readline())
-                parents = np.array( list(map(int, f.readline().split())))
+                parents = np.array( list(map(int, file.readline().split())))
         except IOError:
             print("no such file")
             return
